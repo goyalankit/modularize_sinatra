@@ -5,8 +5,8 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Ankit Goyal"]
   gem.email         = ["ankit3goyal@gmail.com"]
   gem.description   = %q{Code Generator for Sinatra}
-  gem.summary       = %q{Code Generator for Sinatra}
-  gem.homepage      = "http://goyalankit.com"
+  gem.summary       = %q{Creates a modular skeleton for Sinatra application.}
+  gem.homepage      = "https://github.com/goyalankit/modularize_sinatra"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -15,4 +15,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = ModularizeSinatra::VERSION
   gem.add_dependency "rake"
+  gem.add_dependency "rubigen"
 end
