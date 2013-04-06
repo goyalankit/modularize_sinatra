@@ -45,17 +45,14 @@ class ModularizeSinatraGenerator < RubiGen::Base
         m.template "spec/controllers/controller_spec.rb", "spec/controllers/controller_spec.rb"
       end
 
-      #Test framework: only supporting rspec for now
-
-      m.dependency "install_rubigen_scripts", [destination_root, 'modularize_sinatra'],
-        :shebang => options[:shebang], :collision => :force
+      m.dependency "install_rubigen_scripts", [destination_root, 'modularize_sinatra'], :shebang => options[:shebang], :collision => :force
     end
   end
 
   protected
     def banner
       <<-EOS
-Creates a ...
+Creates a skeltan for modularized Sinatra Applications
 
 USAGE: #{spec.name} name
 EOS
@@ -65,7 +62,7 @@ EOS
       opts.separator ''
       opts.separator 'Options:'
       opts.on("-v", "--version", "Show the #{File.basename($0)} version number and quit.")
-       opts.on("-T", "--test-with=TEST_FRAMEWORK", String,
+      opts.on("-T", "--test-with=TEST_FRAMEWORK", String,
               "Select your preferred testing framework.",
               "Options: rspec (default), test_unit.") { |x| options[:test_framework] = x }
       opts.on("-C", "--controller=CONTROLLER_NAME", String,
