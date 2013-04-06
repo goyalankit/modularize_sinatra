@@ -1,0 +1,15 @@
+source "http://rubygems.org"
+
+gem 'sinatra'
+gem 'sinatra-contrib'
+
+gem 'json'
+gem 'rake'
+gem 'activesupport' , '~> 3.2.8'
+gem 'rack-contrib'
+
+group :test do
+  gem '<%= test_framework %>'
+  gem 'rack-test', :require => 'rack/test'
+end
+
