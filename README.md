@@ -69,7 +69,6 @@ To Run specs:
     
 ## Authors
 
-**Ankit Goyal**
  * [about.me](http://about.me/goyalankit)
  * [@_goyalankit](http://twitter.com/_goyalankit)
  * [more projects](http://goyalankit.com/labs)
