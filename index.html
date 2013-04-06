@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Modularize sinatra by goyalankit</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Modularize sinatra</h1>
+        <p>Modularized Sinatra Skeleton Generator</p>
+
+        <p class="view"><a href="https://github.com/goyalankit/modularize_sinatra">View the Project on GitHub <small>goyalankit/modularize_sinatra</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/goyalankit/modularize_sinatra/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/goyalankit/modularize_sinatra/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/goyalankit/modularize_sinatra">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Modularize Sinatra</h1>
+
+<p>Modularized Code Generator for Sinatra</p>
+
+<h2>Installation</h2>
+
+<pre><code>$ gem install modularize_sinatra
+</code></pre>
+
+<h2>Usage</h2>
+
+<p>To generate the skeleton structure:</p>
+
+<pre><code>modularize_sinatra myapp
+</code></pre>
+
+<p>Without any paramters, it will generate a default controller for you called <code>Ping</code> and will create the following route:</p>
+
+<pre><code>GET http://localhost:9292/ping
+&gt; Ahoy! from Myapp 2013-04-07 00:33:58 +0530
+</code></pre>
+
+<p>You can create a custome controller by giving <code>-C</code> option.</p>
+
+<pre><code>modularize_sinatra myapp -C awesome_controller    
+</code></pre>
+
+<p><strong>You can remove the defult scripts<code>destroy, generate</code> generated in script folder.</strong></p>
+
+<p>You'll get the following directory structure with defaults:</p>
+
+<pre><code>.
+|-- Gemfile
+|-- Rakefile
+|-- config
+|   `-- environment.rb
+|-- config.ru
+|-- lib
+|   |-- app.rb
+|   `-- controllers
+|       `-- ping.rb
+|-- myapp.rb
+|-- public
+|-- script
+|   |-- destroy
+|   `-- generate
+|-- spec
+|   |-- controllers
+|   |   `-- ping_spec.rb
+|   |-- spec_helper.rb
+|   `-- support
+`-- tmp
+</code></pre>
+
+<p>To Start the app:</p>
+
+<pre><code>rackup -p 9000
+</code></pre>
+
+<p>Currently <code>rspec</code> is configured by default. Hope to release support for other frameworks in future versions.</p>
+
+<p>To Run specs:</p>
+
+<pre><code>bundle exec rake 
+</code></pre>
+
+<h2>TODO</h2>
+
+<ol>
+<li>Support for active record.</li>
+<li>More testing frameworks.</li>
+<li>Views(the missing link - MVC).</li>
+<li>Remove default scripts generated.</li>
+<li>Refactoring </li>
+</ol><h2>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/goyalankit">goyalankit</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-37320558-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
