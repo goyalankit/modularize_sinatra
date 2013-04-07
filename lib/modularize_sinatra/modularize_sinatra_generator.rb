@@ -43,7 +43,8 @@ class ModularizeSinatraGenerator < RubiGen::Base
       else
         m.template "lib/controllers/controller.rb", "lib/controllers/#{controller_name}.rb"
         m.template "spec/controllers/controller_spec.rb", "spec/controllers/controller_spec.rb"
-        m.directory "views/#{controller_name.pluralize}"
+        m.directory "lib/views/#{controller_name.pluralize}"
+        m.template "lib/views/index.erb", "lib/views/#{controller_name.pluralize}/index.erb"
       end
 
       m.dependency "install_rubigen_scripts", [destination_root, 'modularize_sinatra'], :shebang => options[:shebang], :collision => :force
