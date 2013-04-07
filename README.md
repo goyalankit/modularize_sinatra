@@ -8,50 +8,52 @@ Modularized Code Generator for Sinatra. Gem available on [rubygems](https://ruby
 
 ## Usage
 
-To generate the skeleton structure:
+To generate the skeleton structure with custom controller:
 
-    modularize_sinatra myapp
+    modularize_sinatra myapp -C user
 
-Without any paramters, it will generate a default controller for you called `Ping` and will create the following route:
+To Start the app:
+    
+    rackup -p 9000
 
-    GET http://localhost:9292/ping
-    > Ahoy! from Myapp 2013-04-07 00:33:58 +0530
+It will generate a default index page for you, which can be accessed at:
+    
+    http://localhost:9292/
 
-You can create a custom controller by giving `-C` option.
-
-    modularize_sinatra myapp -C awesome_controller    
-
-**You can remove the defult scripts`destroy, generate` generated in script folder.**
-  
-
-You'll get the following directory structure with defaults:
+You'll get the following directory structure with above command:
 
     .
     |-- Gemfile
+    |-- Gemfile.lock
     |-- Rakefile
     |-- config
     |   `-- environment.rb
     |-- config.ru
     |-- lib
     |   |-- app.rb
-    |   `-- controllers
-    |       `-- ping.rb
-    |-- myapp.rb
+    |   |-- controllers
+    |   |   `-- user.rb
+    |   `-- views
+    |       `-- users
+    |           `-- index.erb
+    |-- my_app.rb
     |-- public
     |-- script
     |   |-- destroy
     |   `-- generate
     |-- spec
     |   |-- controllers
-    |   |   `-- ping_spec.rb
+    |   |   `-- controller_spec.rb
     |   |-- spec_helper.rb
     |   `-- support
     `-- tmp
 
+Without the `-C` paramter( **not recommended** ), it will generate a default controller for you called `Ping` and will create the following route:
 
-To Start the app:
-    
-    rackup -p 9000
+    GET http://localhost:9292/ping
+    > Ahoy! from Myapp 2013-04-07 00:33:58 +0530
+
+**You can remove the defult scripts `destroy, generate` generated in script folder.**
 
 Currently `rspec` is configured by default. Hope to release support for other frameworks in future versions.
 
@@ -63,7 +65,6 @@ To Run specs:
 
 1. Support for active record.
 2. More testing frameworks.
-3. Views(the missing link - MVC).
 3. Remove default scripts generated.
 4. Refactoring 
     
