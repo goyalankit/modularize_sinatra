@@ -17,7 +17,7 @@ Without any paramters, it will generate a default controller for you called `Pin
     GET http://localhost:9292/ping
     > Ahoy! from Myapp 2013-04-07 00:33:58 +0530
 
-You can create a custome controller by giving `-C` option.
+You can create a custom controller by giving `-C` option.
 
     modularize_sinatra myapp -C awesome_controller    
 
@@ -72,7 +72,7 @@ To Run specs:
 **Ankit Goyal**
  * [about.me](http://about.me/goyalankit)
  * [@_goyalankit](http://twitter.com/_goyalankit)
-
+ * [more projects](http://goyalankit.com/labs)
 
 ## Contributing
 
