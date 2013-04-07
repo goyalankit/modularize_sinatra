@@ -14,7 +14,7 @@ To generate the skeleton structure with custom controller:
 
 To Start the app:
     
-    rackup -p 9000
+    rackup -p 9292
 
 It will generate a default index page for you, which can be accessed at:
     
@@ -81,3 +81,4 @@ To Run specs:
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
