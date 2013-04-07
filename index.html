@@ -39,53 +39,57 @@
 
 <h2>Usage</h2>
 
-<p>To generate the skeleton structure:</p>
+<p>To generate the skeleton structure with custom controller:</p>
 
-<pre><code>modularize_sinatra myapp
-</code></pre>
-
-<p>Without any paramters, it will generate a default controller for you called <code>Ping</code> and will create the following route:</p>
-
-<pre><code>GET http://localhost:9292/ping
-&gt; Ahoy! from Myapp 2013-04-07 00:33:58 +0530
-</code></pre>
-
-<p>You can create a custom controller by giving <code>-C</code> option.</p>
-
-<pre><code>modularize_sinatra myapp -C awesome_controller    
-</code></pre>
-
-<p><strong>You can remove the defult scripts<code>destroy, generate</code> generated in script folder.</strong></p>
-
-<p>You'll get the following directory structure with defaults:</p>
-
-<pre><code>.
-|-- Gemfile
-|-- Rakefile
-|-- config
-|   `-- environment.rb
-|-- config.ru
-|-- lib
-|   |-- app.rb
-|   `-- controllers
-|       `-- ping.rb
-|-- myapp.rb
-|-- public
-|-- script
-|   |-- destroy
-|   `-- generate
-|-- spec
-|   |-- controllers
-|   |   `-- ping_spec.rb
-|   |-- spec_helper.rb
-|   `-- support
-`-- tmp
+<pre><code>modularize_sinatra myapp -C user
 </code></pre>
 
 <p>To Start the app:</p>
 
 <pre><code>rackup -p 9000
 </code></pre>
+
+<p>It will generate a default index page for you, which can be accessed at:</p>
+
+<pre><code>http://localhost:9292/
+</code></pre>
+
+<p>You'll get the following directory structure with above command:</p>
+
+<pre><code>.
+|-- Gemfile
+|-- Gemfile.lock
+|-- Rakefile
+|-- config
+|   `-- environment.rb
+|-- config.ru
+|-- lib
+|   |-- app.rb
+|   |-- controllers
+|   |   `-- user.rb
+|   `-- views
+|       `-- users
+|           `-- index.erb
+|-- my_app.rb
+|-- public
+|-- script
+|   |-- destroy
+|   `-- generate
+|-- spec
+|   |-- controllers
+|   |   `-- controller_spec.rb
+|   |-- spec_helper.rb
+|   `-- support
+`-- tmp
+</code></pre>
+
+<p>Without the <code>-C</code> paramter( <strong>not recommended</strong> ), it will generate a default controller for you called <code>Ping</code> and will create the following route:</p>
+
+<pre><code>GET http://localhost:9292/ping
+&gt; Ahoy! from Myapp 2013-04-07 00:33:58 +0530
+</code></pre>
+
+<p><strong>You can remove the defult scripts <code>destroy, generate</code> generated in script folder.</strong></p>
 
 <p>Currently <code>rspec</code> is configured by default. Hope to release support for other frameworks in future versions.</p>
 
@@ -99,12 +103,9 @@
 <ol>
 <li>Support for active record.</li>
 <li>More testing frameworks.</li>
-<li>Views(the missing link - MVC).</li>
 <li>Remove default scripts generated.</li>
 <li>Refactoring </li>
 </ol><h2>Authors</h2>
-
-<p><strong>Ankit Goyal</strong></p>
 
 <ul>
 <li><a href="http://about.me/goyalankit">about.me</a></li>
