@@ -43,6 +43,7 @@ class ModularizeSinatraGenerator < RubiGen::Base
       else
         m.template "lib/controllers/controller.rb", "lib/controllers/#{controller_name}.rb"
         m.template "spec/controllers/controller_spec.rb", "spec/controllers/controller_spec.rb"
+        m.directory "views/#{controller_name.pluralize}"
       end
 
       m.dependency "install_rubigen_scripts", [destination_root, 'modularize_sinatra'], :shebang => options[:shebang], :collision => :force
@@ -79,6 +80,7 @@ EOS
     BASEDIRS = %w(
       config
       lib/controllers
+      lib/views
       public
       spec/controllers
       spec/support
