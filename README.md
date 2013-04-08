@@ -24,7 +24,6 @@ You'll get the following directory structure with above command:
 
     .
     |-- Gemfile
-    |-- Gemfile.lock
     |-- Rakefile
     |-- config
     |   `-- environment.rb
@@ -36,14 +35,14 @@ You'll get the following directory structure with above command:
     |   `-- views
     |       `-- users
     |           `-- index.erb
-    |-- my_app.rb
+    |-- myapp.rb
     |-- public
     |-- script
     |   |-- destroy
     |   `-- generate
     |-- spec
     |   |-- controllers
-    |   |   `-- controller_spec.rb
+    |   |   `-- user_spec.rb
     |   |-- spec_helper.rb
     |   `-- support
     `-- tmp

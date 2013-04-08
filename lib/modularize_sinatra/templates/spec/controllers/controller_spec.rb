@@ -6,7 +6,8 @@ describe  <%= module_name %>::Controllers::<%= controller_module_name %> do
   end
 
   it "should do nothing" do
-    true.should == true
+    get '/'
+    last_response.status.should == 200
   end
 end
 

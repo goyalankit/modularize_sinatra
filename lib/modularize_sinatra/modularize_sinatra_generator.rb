@@ -42,7 +42,7 @@ class ModularizeSinatraGenerator < RubiGen::Base
         m.template "spec/controllers/ping_spec.rb", "spec/controllers/ping_spec.rb"
       else
         m.template "lib/controllers/controller.rb", "lib/controllers/#{controller_name}.rb"
-        m.template "spec/controllers/controller_spec.rb", "spec/controllers/controller_spec.rb"
+        m.template "spec/controllers/controller_spec.rb", "spec/controllers/#{controller_name}_spec.rb"
         m.directory "lib/views/#{controller_name.pluralize}"
         m.template "lib/views/index.erb", "lib/views/#{controller_name.pluralize}/index.erb"
       end
