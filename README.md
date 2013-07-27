@@ -1,6 +1,7 @@
 # Modularize Sinatra
 
 Modularized Code Generator for Sinatra. Gem available on [rubygems](https://rubygems.org/gems/modularize_sinatra)
+More information at: http://goyalankit.com/blog/2013/07/23/modularize-sinatra/
 
 ## Installation
 
