@@ -1,5 +1,7 @@
 # Modularize Sinatra
 
+[![Gem Version](https://badge.fury.io/rb/modularize_sinatra.png)](http://badge.fury.io/rb/modularize_sinatra)
+
 Modularized Code Generator for Sinatra. Gem available on [rubygems](https://rubygems.org/gems/modularize_sinatra)
 More information at: http://goyalankit.com/blog/2013/07/23/modularize-sinatra/
 
