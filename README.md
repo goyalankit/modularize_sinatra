@@ -41,8 +41,6 @@ You'll get the following directory structure with above command:
     |-- myapp.rb
     |-- public
     |-- script
-    |   |-- destroy
-    |   `-- generate
     |-- spec
     |   |-- controllers
     |   |   `-- user_spec.rb
@@ -55,8 +53,6 @@ Without the `-C` paramter( **not recommended** ), it will generate a default con
     GET http://localhost:9292/ping
     > Ahoy! from Myapp 2013-04-07 00:33:58 +0530
 
-**You can remove the defult scripts `destroy, generate` generated in script folder.**
-
 Currently `rspec` is configured by default. Hope to release support for other frameworks in future versions.
 
 To Run specs:
@@ -67,12 +63,9 @@ To Run specs:
 
 1. Support for active record.
 2. More testing frameworks.
-3. Remove default scripts generated.
-4. Refactoring 
     
 ## Authors
 
- * [about.me](http://about.me/goyalankit)
  * [@_goyalankit](http://twitter.com/_goyalankit)
  * [more projects](http://goyalankit.com/labs)
 
