@@ -31,7 +31,10 @@
         <h1>
 <a name="modularize-sinatra" class="anchor" href="#modularize-sinatra"><span class="octicon octicon-link"></span></a>Modularize Sinatra</h1>
 
-<p>Modularized Code Generator for Sinatra. Gem available on <a href="https://rubygems.org/gems/modularize_sinatra">rubygems</a></p>
+<p><a href="http://badge.fury.io/rb/modularize_sinatra"><img src="https://badge.fury.io/rb/modularize_sinatra.png" alt="Gem Version"></a></p>
+
+<p>Modularized Code Generator for Sinatra. Gem available on <a href="https://rubygems.org/gems/modularize_sinatra">rubygems</a>
+More information at: <a href="http://goyalankit.com/blog/2013/07/23/modularize-sinatra/">http://goyalankit.com/blog/2013/07/23/modularize-sinatra/</a></p>
 
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
@@ -75,8 +78,6 @@
 |-- myapp.rb
 |-- public
 |-- script
-|   |-- destroy
-|   `-- generate
 |-- spec
 |   |-- controllers
 |   |   `-- user_spec.rb
@@ -90,8 +91,6 @@
 <pre><code>GET http://localhost:9292/ping
 &gt; Ahoy! from Myapp 2013-04-07 00:33:58 +0530
 </code></pre>
-
-<p><strong>You can remove the defult scripts <code>destroy, generate</code> generated in script folder.</strong></p>
 
 <p>Currently <code>rspec</code> is configured by default. Hope to release support for other frameworks in future versions.</p>
 
