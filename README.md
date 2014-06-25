@@ -59,16 +59,6 @@ To Run specs:
 
     bundle exec rake 
     
-## TODO
-
-1. Support for active record.
-2. More testing frameworks.
-    
-## Authors
-
- * [@_goyalankit](http://twitter.com/_goyalankit)
- * [more projects](http://goyalankit.com/labs)
-
 ## Contributing
 
 1. Fork it
