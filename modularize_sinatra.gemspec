@@ -16,5 +16,6 @@ Gem::Specification.new do |gem|
   gem.version       = ModularizeSinatra::VERSION
   gem.add_development_dependency "rake"
   gem.add_dependency "rubigen"
+  gem.add_dependency "i18n"
   gem.add_dependency 'activesupport', '>= 2.3.5', "< 3.2.0"
 end
