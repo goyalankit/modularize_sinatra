@@ -25,27 +25,24 @@ It will generate a default index page for you, which can be accessed at:
 
 You'll get the following directory structure with above command:
 
-    .
-    |-- Gemfile
-    |-- Rakefile
-    |-- config
-    |   `-- environment.rb
-    |-- config.ru
-    |-- lib
-    |   |-- app.rb
-    |   |-- controllers
-    |   |   `-- user.rb
-    |   `-- views
-    |       `-- users
-    |           `-- index.erb
-    |-- myapp.rb
-    |-- public
-    |-- spec
-    |   |-- controllers
-    |   |   `-- user_spec.rb
-    |   |-- spec_helper.rb
-    |   `-- support
-    `-- tmp
+        .
+        ├── config
+        │   └── environment.rb
+        ├── lib
+        │   ├── controllers
+        │   │   └── user.rb
+        │   ├── views
+        │   │   └── users
+        │   │       └── index.erb
+        │   └── app.rb
+        ├── spec
+        │   ├── controllers
+        │   │   └── user_spec.rb
+        │   └── spec_helper.rb
+        ├── Gemfile
+        ├── Rakefile
+        ├── config.ru
+        └── myapp.rb
 
 Without the `-C` paramter( **not recommended** ), it will generate a default controller for you called `Ping` and will create the following route:
 
