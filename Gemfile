@@ -5,3 +5,5 @@ gemspec
 
 gem 'thor'
 gem 'pry'
+gem 'erubis'
+gem 'parseconfig'

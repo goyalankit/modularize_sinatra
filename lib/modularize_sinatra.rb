@@ -1,3 +1,4 @@
+require "active_support/inflector"
 require "modularize_sinatra/version"
 require "modularize_sinatra/helper_methods"
 require "modularize_sinatra/app_generator"

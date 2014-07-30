@@ -6,6 +6,6 @@ $: << File.dirname(__FILE__)
 
 ENV['RACK_ENV'] ||= 'development'
 
-require '<%= project_name %>'
+require '<%= app_name %>'
 run <%= module_name %>::App
 

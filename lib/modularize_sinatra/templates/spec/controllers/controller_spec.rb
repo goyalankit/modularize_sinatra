@@ -7,7 +7,7 @@ describe  <%= module_name %>::Controllers::<%= controller_module_name %> do
 
   it "should do nothing" do
     get '/'
-    last_response.status.should == 200
+    expect(last_response.status).to eq(200)
   end
 end
 

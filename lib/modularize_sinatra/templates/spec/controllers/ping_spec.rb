@@ -8,8 +8,8 @@ describe  <%= module_name %>::Controllers::Ping do
     describe "get /ping" do
       it "should return 200" do
         get :ping
-        last_response.body.should == "Ahoy! from <%= module_name %> #{Time.now}"
-        last_response.status.should == 200
+        expect(last_response.body).to eq("Ahoy! from <%= module_name %> #{Time.now}")
+        expect(last_response.status).to eq(200)
       end
     end
 end
